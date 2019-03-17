@@ -33,7 +33,7 @@ type Message @model {
 }
 
 type File @model {
-  id: ID! isUnique
+  id: ID! @isUnique
   secret: String
   name: String
   size: Int
@@ -43,9 +43,9 @@ type File @model {
   chat: Chat @relation(name: "ChatPhoto")
 }
 
-  # Uncomment below - you can declare relations between models like this
+# Uncomment below - you can declare relations between models like this
 
-  # posts: [Post!]! @relation(name: "UserPosts")
+# posts: [Post!]! @relation(name: "UserPosts")
 
 # Uncomment the model below as well
 
