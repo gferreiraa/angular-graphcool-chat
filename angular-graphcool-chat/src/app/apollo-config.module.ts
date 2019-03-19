@@ -22,7 +22,8 @@ export class ApolloConfigModule {
 
     apollo.create({
       link: http,
-      cache: new InMemoryCache()
+      cache: new InMemoryCache(),
+      connectToDevTools: true
     });
   }
 }
