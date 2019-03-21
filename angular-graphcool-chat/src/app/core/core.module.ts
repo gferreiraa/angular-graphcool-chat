@@ -17,10 +17,8 @@ export class CoreModule {
     // SkipSelf: Ignora Dependencias que estejam no mesmo nível hierarquico do Core Module
     @Optional() @SkipSelf() parentModule: CoreModule
   ) {
-
     if ( parentModule ) {
       throw new Error('Core Module is already loaded. Import it in the appModule only.');
     }
-
   }
 }
